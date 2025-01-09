@@ -5,7 +5,6 @@ public class PlayerRotater : MonoBehaviour
     public Rigidbody2D rb;
     Vector2 mousePosition;
 
-    // Update is called once per frame
     void Update()
     {
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);

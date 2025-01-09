@@ -12,10 +12,7 @@ public class Health : MonoBehaviour
     [SerializeField]
     private int _hp;
 
-    public bool isMinion = false;
-    public bool isGangster = false;
     public int MaxHp => _maxHp;
-    public bool isBoss = false;
 
     public int Hp
     {

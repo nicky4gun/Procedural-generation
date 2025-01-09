@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 279563828}
   - component: {fileID: 279563833}
   - component: {fileID: 279563834}
+  - component: {fileID: 279563835}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -318,6 +319,41 @@ MonoBehaviour:
   standardAttackPrefab: {fileID: 24762109479789025, guid: 4f925d1a2b56f844d84870a6eb95e74c, type: 3}
   firePoint: {fileID: 656506982}
   fireForce: 20
+--- !u!114 &279563835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 279563827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a746d6a44556a54b8815480c6ed5dad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHp: 100
+  _hp: 0
+  Healed:
+    m_PersistentCalls:
+      m_Calls: []
+  Damaged:
+    m_PersistentCalls:
+      m_Calls: []
+  Died:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 279563827}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &402795437
 GameObject:
   m_ObjectHideFlags: 0
