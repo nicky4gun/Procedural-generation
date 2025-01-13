@@ -3,7 +3,7 @@ using UnityEngine;
 public class StandardAttack : MonoBehaviour
 {
     public float TravelTime = 0f;
-    public int damage = 3;
+    public int damage = 10;
 
     void Update()
     {

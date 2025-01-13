@@ -5,11 +5,14 @@ public class PlayerAttack : MonoBehaviour
     public GameObject standardAttackPrefab;
     public Transform firePoint;
     public float fireForce = 20f;
+    public float cooldown = 0f;
 
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        cooldown += Time.deltaTime;
+
+        if (Input.GetMouseButtonDown(0) && cooldown >= 1f)
         {
             Fire();
         }
