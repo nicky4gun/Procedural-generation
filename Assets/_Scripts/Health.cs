@@ -53,4 +53,8 @@ public class Health : MonoBehaviour
     public void Kill() => Hp = 0;
     public void Adjust(int value) => Hp = value;
 
+    public void IncreaseMaxHP()
+    {
+        _maxHp += 20;
+    }
 }
