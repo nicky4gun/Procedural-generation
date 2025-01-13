@@ -15,6 +15,8 @@ public class PlayerAttack : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && cooldown >= 1f)
         {
             Fire();
+
+            cooldown = 0f;
         }
     }
 
