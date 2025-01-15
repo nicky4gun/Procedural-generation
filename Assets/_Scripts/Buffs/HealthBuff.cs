@@ -2,14 +2,10 @@ using UnityEngine;
 
 public class HealthBuff : MonoBehaviour
 {
-    Health playerHealth;
-    void Start()
-    {
-        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
-    }
+    public int buffAmount = 0;
 
-    void Activation()
+    public void BoostHP(int boost)
     {
-        playerHealth.IncreaseMaxHP();
+        buffAmount += boost;
     }
 }
