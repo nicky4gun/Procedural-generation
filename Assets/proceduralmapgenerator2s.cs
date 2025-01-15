@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
+
+
 public class ProceduralMapGenerator2D : MonoBehaviour
 {
     public int mapWidth = 50;
