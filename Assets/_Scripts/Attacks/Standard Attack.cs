@@ -3,7 +3,7 @@ using UnityEngine;
 public class StandardAttack : MonoBehaviour
 {
     public float TravelTime = 0f;
-    public int damage = 10;
+    public static int damage = 10;
 
     void Update()
     {
@@ -22,5 +22,10 @@ public class StandardAttack : MonoBehaviour
         {
             health.Damage(damage);
         }
+    }
+
+    public void BuffDamage()
+    {
+        damage += 2;
     }
 }
