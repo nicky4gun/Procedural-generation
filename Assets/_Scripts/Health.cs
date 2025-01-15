@@ -11,6 +11,14 @@ public class Health : MonoBehaviour
     private int _maxHp = 100;
     [SerializeField]
     private int _hp;
+    public int HPBuff;
+
+    void Start()
+    {
+        HPBuff = GameObject.FindGameObjectWithTag("StatManager").GetComponent<HealthBuff>().buffAmount;
+
+        _maxHp += HPBuff;
+    }
 
     public int MaxHp => _maxHp;
 
@@ -52,9 +60,4 @@ public class Health : MonoBehaviour
     public void HealFull() => Hp = _maxHp;
     public void Kill() => Hp = 0;
     public void Adjust(int value) => Hp = value;
-
-    public void IncreaseMaxHP()
-    {
-        _maxHp += 20;
-    }
 }

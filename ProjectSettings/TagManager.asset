@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - PlayerAttack
+  - BuffManager
   layers:
   - Default
   - TransparentFX

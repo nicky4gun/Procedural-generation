@@ -9,11 +9,6 @@ public class DamageBuff : MonoBehaviour
         //playerDamage = GameObject.FindGameObjectWithTag("PlayerAttack").GetComponent<StandardAttack>();
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        Activation();
-    }
-
     void Activation()
     {
         StandardAttack.BuffDamage();
