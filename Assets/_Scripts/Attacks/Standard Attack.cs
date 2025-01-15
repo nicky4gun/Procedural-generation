@@ -16,15 +16,14 @@ public class StandardAttack : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(gameObject);
-
         if (collision.gameObject.TryGetComponent<Health>(out var health))
         {
             health.Damage(damage);
         }
+        Destroy(gameObject);
     }
 
-    public void BuffDamage()
+    public static void BuffDamage()
     {
         damage += 2;
     }

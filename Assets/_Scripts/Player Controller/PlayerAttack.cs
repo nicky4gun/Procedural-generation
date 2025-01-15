@@ -12,7 +12,7 @@ public class PlayerAttack : MonoBehaviour
     {
         cooldown += Time.deltaTime;
 
-        if (Input.GetMouseButtonDown(0) && cooldown >= attackSpeed)
+        if (Input.GetMouseButton(0) && cooldown >= attackSpeed)
         {
             Fire();
 
