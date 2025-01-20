@@ -15,7 +15,7 @@ public class Health : MonoBehaviour
 
     void Start()
     {
-        HPBuff = GameObject.FindGameObjectWithTag("StatManager").GetComponent<HealthBuff>().buffAmount;
+        HPBuff = HealthBuff.buffAmount;
 
         _maxHp += HPBuff;
     }
