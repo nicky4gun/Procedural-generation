@@ -2,18 +2,16 @@ using UnityEngine;
 
 public class SpeedBuff : MonoBehaviour
 {
-    PlayerMovement1 playerSpeed;
-    PlayerAttack playerAttackspeed;
+    public static float speedBuffAmount;
+    public static float attackSpeedBuffAmount;
 
-    void Start()
+    public void BuffSpeed(float speedBuff)
     {
-        playerSpeed = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement1>();
-        playerAttackspeed = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerAttack>();
+        speedBuffAmount += speedBuff;
     }
 
-    void Activation()
+    public void BuffAttackSpeed(float attackSpeedBuff)
     {
-        playerSpeed.SpeedBuff();
-        playerAttackspeed.AttackspeedBuff();
+        attackSpeedBuffAmount += attackSpeedBuff;
     }
 }

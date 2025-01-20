@@ -8,6 +8,10 @@ public class PlayerAttack : MonoBehaviour
     public float cooldown = 0f;
     public float attackSpeed = 1f;
 
+    private void Start()
+    {
+        attackSpeed -= SpeedBuff.attackSpeedBuffAmount;
+    }
     void Update()
     {
         cooldown += Time.deltaTime;
