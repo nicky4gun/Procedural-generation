@@ -2,16 +2,11 @@ using UnityEngine;
 
 public class DamageBuff : MonoBehaviour
 {
-    //StandardAttack playerDamage;
+    [SerializeField]
+    public static int buffAmount;
 
-    void Start()
+    public void BoostDamage(int buff)
     {
-        //playerDamage = GameObject.FindGameObjectWithTag("PlayerAttack").GetComponent<StandardAttack>();
-    }
-
-    void Activation()
-    {
-        StandardAttack.BuffDamage();
-        Debug.Log("Damage boost");
+        buffAmount += buff;
     }
 }

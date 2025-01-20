@@ -5,6 +5,10 @@ public class StandardAttack : MonoBehaviour
     public float TravelTime = 0f;
     public static int damage = 10;
 
+    private void Start()
+    {
+        damage += DamageBuff.buffAmount;
+    }
     void Update()
     {
         TravelTime += Time.deltaTime;

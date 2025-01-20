@@ -5,8 +5,8 @@ public class HealthBuff : MonoBehaviour
     [SerializeField]
     public static int buffAmount = 0;
 
-    public void BoostHP(int boost)
+    public void BoostHP(int buff)
     {
-        buffAmount += boost;
+        buffAmount += buff;
     }
 }
