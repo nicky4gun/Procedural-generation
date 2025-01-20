@@ -319,6 +319,7 @@ MonoBehaviour:
   firePoint: {fileID: 6242012402690688415}
   fireForce: 20
   cooldown: 0
+  attackSpeed: 1
 --- !u!114 &7257606518543471052
 MonoBehaviour:
   m_ObjectHideFlags: 0
