@@ -17,7 +17,7 @@ public class PlayerMovement1 : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.linearVelocity = new Vector2(movement.x * moveSpeed, movement.y * moveSpeed);
+        rb.linearVelocity = new Vector2(movement.x, movement.y).normalized * moveSpeed;
     }
 
     public void SpeedBuff()
