@@ -52,7 +52,7 @@ public class MeleeEnemy : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = transform.up * speed;
+        rb.linearVelocity = transform.up * speed;
     }
 
     private void RotateTowardsTarget()
