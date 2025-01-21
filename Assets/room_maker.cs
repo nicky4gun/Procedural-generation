@@ -4,7 +4,7 @@ using UnityEngine.Tilemaps;
 
 public class room_maker : MonoBehaviour
 {
-
+    //Behold denne
     public int mapWidth = 50;
     public int mapHeight = 50;
     public int roomCount = 10;
