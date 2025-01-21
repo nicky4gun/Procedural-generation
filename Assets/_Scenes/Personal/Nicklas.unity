@@ -737,7 +737,7 @@ TilemapCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1614303955}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -809,19 +809,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1639736859}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0885a9b48a049f479a31fd1428f8cda, type: 3}
+  m_Script: {fileID: 11500000, guid: d03b8c8f62fa29a4d9ef3684256c59bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mapWidth: 50
   mapHeight: 50
   roomCount: 10
-  minRoomSize: 1
+  minRoomSize: 5
   maxRoomSize: 10
   floorTilemap: {fileID: 2057733240}
   wallTilemap: {fileID: 1614303956}
   floorTile: {fileID: 11400000, guid: e87dff5acf16e594f966f3ee13693da5, type: 2}
   wallTile: {fileID: 11400000, guid: 4a51a65e873f528438fc08628b0cb63d, type: 2}
   player: {fileID: 1296997310}
+  playerSpawn: {x: 0, y: 0}
 --- !u!1 &2057733237
 GameObject:
   m_ObjectHideFlags: 0
