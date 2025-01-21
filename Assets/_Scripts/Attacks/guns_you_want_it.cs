@@ -53,14 +53,13 @@ public class Guns_you_want_it: MonoBehaviour
         {
             // Calculate spread
             float spread = Random.Range(-spreadAngle, spreadAngle);
-            Quaternion bulletRotation = Quaternion.Euler(shootPoint.eulerAngles + new Vector3(0, 0, spread));
-
+            Transform shotDir = shootPoint;
+            shotDir.RotateAround(shootPoint.position, Vector3.forward, spread);
             // Spawn the bullet
-            GameObject bullet = Instantiate(bulletPrefab, shootPoint.position, bulletRotation);
+            GameObject bullet = Instantiate(bulletPrefab, shootPoint.position, Quaternion.identity);
 
             // Apply velocity to the bullet
-            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-            rb.linearVelocity = bulletRotation * Vector2.right * bulletSpeed;
+            bullet.GetComponent<Rigidbody2D>().linearVelocity =  shotDir.up * bulletSpeed;
 
             // Destroy the bullet after 2 seconds
             Destroy(bullet, 2f);
