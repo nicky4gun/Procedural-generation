@@ -27,6 +27,7 @@ public class room_maker : MonoBehaviour
         DrawMap();
 
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        player.transform = FindRandomFloorTile();
     }
 
     void GenerateMap()
@@ -66,6 +67,17 @@ public class room_maker : MonoBehaviour
 
         // Connect the rooms with zig-zag corridors
         ConnectRoomsWithZigZagCorridors();
+    }
+
+    Vector2Int FindRandomFloorTile()
+    {
+        while (true)
+        {
+            int x = Random.Range(0, mapWidth);
+            int y = Random.Range(0, mapHeight);
+
+            if (map[x, y]) return new Vector2Int(x, y); // Return a random floor tile
+        }
     }
 
     void CreateCorridor(Vector2Int start, Vector2Int end)
