@@ -17,6 +17,7 @@ public class room_maker : MonoBehaviour
     public TileBase wallTile;
 
     public Transform player;
+    public Vector2 playerSpawn;
 
     private bool[,] map;
     private List<Vector2Int> roomCenters = new List<Vector2Int>();
@@ -27,7 +28,9 @@ public class room_maker : MonoBehaviour
         DrawMap();
 
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        player.transform = FindRandomFloorTile();
+        playerSpawn=FindRandomFloorTile();
+
+        player.position = new Vector3(playerSpawn.x + 0.5f, playerSpawn.y + 0.5f, 0);
     }
 
     void GenerateMap()
