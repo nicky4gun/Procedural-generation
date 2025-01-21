@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 2480903963004511627}
   - component: {fileID: 2632036808142107500}
   - component: {fileID: 7257606518543471052}
+  - component: {fileID: 337665825594760129}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -334,6 +335,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHp: 100
   _hp: 0
+  HPBuff: 0
   Healed:
     m_PersistentCalls:
       m_Calls: []
@@ -355,3 +357,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &337665825594760129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6966426659078155529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c6fecb1b02c24145846fcdc628e2a9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
