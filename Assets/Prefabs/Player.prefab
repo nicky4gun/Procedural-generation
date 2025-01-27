@@ -374,6 +374,6 @@ MonoBehaviour:
   bulletsPerShot: 1
   bulletSpeed: 10
   fireRate: 0.2
-  spreadAngle: 10
+  spreadAngle: 0
   muzzleFlashPrefab: {fileID: 0}
   shootSound: {fileID: 0}
