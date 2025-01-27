@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PlayerAttack
   - BuffManager
+  - spawnable
   layers:
   - Default
   - TransparentFX
