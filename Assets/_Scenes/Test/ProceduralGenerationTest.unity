@@ -895,8 +895,8 @@ MonoBehaviour:
   wallTilemap: {fileID: 1773251944}
   floorTile: {fileID: 11400000, guid: e87dff5acf16e594f966f3ee13693da5, type: 2}
   wallTile: {fileID: 11400000, guid: 4a51a65e873f528438fc08628b0cb63d, type: 2}
-  player: {fileID: 1078005795}
-  playerSpawn: {x: 0, y: 0}
+  enemies: 15
+  enemyPrefab: {fileID: 656710119758037794, guid: 0b2708c00bda67145b8d631da9fc5c71, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
