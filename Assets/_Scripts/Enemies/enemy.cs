@@ -1,7 +1,4 @@
-
-
 using UnityEngine;
-
 
 public class EnemyFollow : MonoBehaviour
 {
@@ -56,4 +53,3 @@ public class EnemyFollow : MonoBehaviour
         }
     }
 }
-
