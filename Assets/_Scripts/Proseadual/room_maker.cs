@@ -16,8 +16,8 @@ public class room_maker : MonoBehaviour
     public TileBase floorTile;
     public TileBase wallTile;
 
-    public Transform player;
-    public Vector2 playerSpawn;
+    private Transform player;
+    private Vector2 playerSpawn;
 
     private bool[,] map;
     private List<Vector2Int> roomCenters = new List<Vector2Int>();
