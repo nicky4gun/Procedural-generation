@@ -4,7 +4,7 @@ using UnityEngine.Tilemaps;
 
 public class room_maker : MonoBehaviour
 {
-
+    //Behold denne
     public int mapWidth = 50;
     public int mapHeight = 50;
     public int roomCount = 10;
@@ -17,6 +17,7 @@ public class room_maker : MonoBehaviour
     public TileBase wallTile;
 
     public Transform player;
+    public Vector2 playerSpawn;
 
     private bool[,] map;
     private List<Vector2Int> roomCenters = new List<Vector2Int>();
@@ -27,6 +28,9 @@ public class room_maker : MonoBehaviour
         DrawMap();
 
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        playerSpawn=FindRandomFloorTile();
+
+        player.position = new Vector3(playerSpawn.x + 0.5f, playerSpawn.y + 0.5f, 0);
     }
 
     void GenerateMap()
@@ -66,6 +70,17 @@ public class room_maker : MonoBehaviour
 
         // Connect the rooms with zig-zag corridors
         ConnectRoomsWithZigZagCorridors();
+    }
+
+    Vector2Int FindRandomFloorTile()
+    {
+        while (true)
+        {
+            int x = Random.Range(0, mapWidth);
+            int y = Random.Range(0, mapHeight);
+
+            if (map[x, y]) return new Vector2Int(x, y); // Return a random floor tile
+        }
     }
 
     void CreateCorridor(Vector2Int start, Vector2Int end)
