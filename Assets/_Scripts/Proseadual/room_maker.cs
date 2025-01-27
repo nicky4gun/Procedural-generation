@@ -19,6 +19,10 @@ public class room_maker : MonoBehaviour
     private Transform player;
     private Vector2 playerSpawn;
 
+    public int enemies;
+    private Transform enemySpawn;
+    public GameObject enemyPrefab;
+
     private bool[,] map;
     private List<Vector2Int> roomCenters = new List<Vector2Int>();
 
@@ -26,6 +30,7 @@ public class room_maker : MonoBehaviour
     {
         GenerateMap();
         DrawMap();
+        SpawnEnemies();
 
         player = GameObject.FindGameObjectWithTag("Player").transform;
         playerSpawn=FindRandomFloorTile();
@@ -80,6 +85,7 @@ public class room_maker : MonoBehaviour
             int y = Random.Range(0, mapHeight);
 
             if (map[x, y]) return new Vector2Int(x, y); // Return a random floor tile
+            
         }
     }
 
@@ -148,8 +154,13 @@ public class room_maker : MonoBehaviour
             }
         }
     }
-
+    void SpawnEnemies()
+    {
+        for (int e = 0; e < enemies; e++)
+        {
+            Vector2 enemySpawn1 = FindRandomFloorTile();
+            
+            Instantiate(enemyPrefab, new Vector3(enemySpawn1.x + 0.5f, enemySpawn1.y + 0.5f, 0), Quaternion.identity);
+        }
+    }
 }
-
-    
-
