@@ -26,7 +26,7 @@ public class Guns_you_want_it: MonoBehaviour
     void Update()
     {
         // Shooting
-        if (Input.GetButtonDown("Fire1") && Time.time >= nextFireTime)
+        if (Input.GetButton("Fire1") && Time.time >= nextFireTime)
         {
             Shoot();
             nextFireTime = Time.time + fireRate;
