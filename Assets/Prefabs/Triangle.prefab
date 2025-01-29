@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3302454836953787892}
   - component: {fileID: 1720956862643847608}
   - component: {fileID: 2777644591571495330}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Triangle
   m_TagString: spawnable
   m_Icon: {fileID: 0}
@@ -219,7 +219,7 @@ MonoBehaviour:
   player: {fileID: 0}
   speed: 2
   stopDistance: 1.5
-  detectionRange: 10
-  shootingRange: 5
+  detectionRange: 3
+  shootingRange: 2
   projectilePrefab: {fileID: 1064303666294053353, guid: bedaf5afc2f26694cac48c8b52fbdac6, type: 3}
   shootingCooldown: 2
