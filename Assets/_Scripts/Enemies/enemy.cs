@@ -12,6 +12,11 @@ public class EnemyFollow : MonoBehaviour
 
     private float nextShotTime;
 
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+    }
+
     void Update()
     {
         // If the player exists
