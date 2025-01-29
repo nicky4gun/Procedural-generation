@@ -17,10 +17,10 @@ public class NewEnemy : MonoBehaviour
         switch( Behavior.Passive )
         {
             case Behavior.Passive:
-                checkForPlayer();
+                
                 break;
             case Behavior.Aggresive:
-                attackPlayer();
+                
                 break;
         }
     }
