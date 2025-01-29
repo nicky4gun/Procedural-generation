@@ -9,9 +9,4 @@ public class SpeedBuff : MonoBehaviour
     {
         speedBuffAmount += speedBuff;
     }
-
-    public void BuffAttackSpeed(float attackSpeedBuff)
-    {
-        attackSpeedBuffAmount += attackSpeedBuff;
-    }
 }
