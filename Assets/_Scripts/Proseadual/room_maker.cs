@@ -30,12 +30,13 @@ public class room_maker : MonoBehaviour
     {
         GenerateMap();
         DrawMap();
-        SpawnEnemies();
 
         player = GameObject.FindGameObjectWithTag("Player").transform;
         playerSpawn=FindRandomFloorTile();
 
         player.position = new Vector3(playerSpawn.x + 0.5f, playerSpawn.y + 0.5f, 0);
+
+        SpawnEnemies();
     }
 
     void GenerateMap()
@@ -159,8 +160,17 @@ public class room_maker : MonoBehaviour
         for (int e = 0; e < enemies; e++)
         {
             Vector2 enemySpawn1 = FindRandomFloorTile();
-            
-            Instantiate(enemyPrefab, new Vector3(enemySpawn1.x + 0.5f, enemySpawn1.y + 0.5f, 0), Quaternion.identity);
+
+            float distance = Vector2.Distance(enemySpawn1, playerSpawn);
+
+            if (distance > 3)
+            {
+                Instantiate(enemyPrefab, new Vector3(enemySpawn1.x + 0.5f, enemySpawn1.y + 0.5f, 0), Quaternion.identity);
+            }
+            else
+            {
+                e--;
+            }
         }
     }
 }
