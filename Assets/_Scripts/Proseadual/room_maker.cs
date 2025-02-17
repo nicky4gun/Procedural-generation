@@ -20,6 +20,7 @@ public class room_maker : MonoBehaviour
     private Vector2 playerSpawn;
 
     public int enemies;
+    [SerializeField] private GameObject enemyContrainer;
     private Transform enemySpawn;
     public GameObject enemyPrefab;
 
@@ -165,7 +166,8 @@ public class room_maker : MonoBehaviour
 
             if (distance > 3)
             {
-                Instantiate(enemyPrefab, new Vector3(enemySpawn1.x + 0.5f, enemySpawn1.y + 0.5f, 0), Quaternion.identity);
+                GameObject tempEnemy = Instantiate(enemyPrefab, enemyContrainer.transform);
+                tempEnemy.transform.position = new Vector3(enemySpawn1.x + 0.5f, enemySpawn1.y + 0.5f, 0);
             }
             else
             {
