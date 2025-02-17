@@ -10,7 +10,7 @@ public class PlayerAttack : MonoBehaviour
 
     private void Start()
     {
-        attackSpeed -= SpeedBuff.attackSpeedBuffAmount;
+        attackSpeed -= AttackSpeedBuff.AttackSpeedBuffAmount;
     }
     void Update()
     {
