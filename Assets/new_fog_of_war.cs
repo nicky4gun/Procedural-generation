@@ -4,32 +4,32 @@ using System.Collections.Generic;
 
 public class FogOfWar : MonoBehaviour
 {
-    public Tilemap fogTilemapBlack;   // Black fog
-    public Tilemap fogTilemapTransparent; // Transparent fog
-    public TileBase fogTileBlack;     // Fully dark tile
-    public TileBase fogTileTransparent; // Semi-transparent tile
+    public Tilemap fogTilemapBlack;        // Black fog (fully hidden)
+    public Tilemap fogTilemapTransparent;  // Transparent fog (buffer)
+    public TileBase fogTileBlack;          // Dark tile
+    public TileBase fogTileTransparent;    // Semi-transparent tile
     public Transform player;
-    public float revealRadius = 3f;   // Full reveal radius
+    public float revealRadius = 3f;   // Radius for full visibility
     public float fadeRadius = 5f;     // Buffer fade area
 
     private HashSet<Vector3Int> revealedTiles = new HashSet<Vector3Int>();
 
     void Start()
     {
-        GenerateFog();  // Ensure the fog covers the entire map
-        UpdateFog();
+        GenerateFog();  // Fill the map with fog
+        UpdateFog();    // Reveal around player at start
     }
 
     void Update()
     {
-        UpdateFog();
+        UpdateFog();  // Update fog as the player moves
     }
 
     void GenerateFog()
     {
-        for (int x = 0; x < 50; x++) // Adjust map size
+        for (int x = -50; x < 50; x++) // Adjust to map size
         {
-            for (int y = 0; y < 50; y++)
+            for (int y = -50; y < 50; y++)
             {
                 Vector3Int cellPosition = new Vector3Int(x, y, 0);
                 fogTilemapBlack.SetTile(cellPosition, fogTileBlack);
@@ -55,18 +55,28 @@ public class FogOfWar : MonoBehaviour
 
                 if (distance <= fullReveal)
                 {
-                    fogTilemapBlack.SetTile(cellPosition, null); // Remove black fog
-                    fogTilemapTransparent.SetTile(cellPosition, null); // Remove transparent fog
+                    // Fully reveal area
+                    fogTilemapBlack.SetTile(cellPosition, null);
+                    fogTilemapTransparent.SetTile(cellPosition, null);
                 }
                 else if (distance <= fadeOut)
                 {
-                    fogTilemapBlack.SetTile(cellPosition, fogTileBlack); // Ensure black fog is present
-                    fogTilemapTransparent.SetTile(cellPosition, fogTileTransparent); // Keep semi-transparent buffer
+                    // Add semi-transparent fog in the buffer zone
+                    fogTilemapBlack.SetTile(cellPosition, null);
+                    fogTilemapTransparent.SetTile(cellPosition, fogTileTransparent);
                 }
+                else
+                {
+                    // Keep fog beyond the buffer area
+                    fogTilemapBlack.SetTile(cellPosition, fogTileBlack);
+                    fogTilemapTransparent.SetTile(cellPosition, fogTileTransparent);
+                }
+
+                newVisibleTiles.Add(cellPosition);
             }
         }
 
-        // Restore fog outside the vision radius
+        // Restore fog outside vision range
         foreach (Vector3Int oldTile in revealedTiles)
         {
             if (!newVisibleTiles.Contains(oldTile))
@@ -79,4 +89,3 @@ public class FogOfWar : MonoBehaviour
         revealedTiles = newVisibleTiles;
     }
 }
-

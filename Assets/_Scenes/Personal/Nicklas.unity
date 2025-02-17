@@ -343,7 +343,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 57
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -734,7 +734,7 @@ PrefabInstance:
     - target: {fileID: 337665825594760129, guid: 696b456e12faf724a87fea157a39ff12,
         type: 3}
       propertyPath: spreadAngle
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 337665825594760129, guid: 696b456e12faf724a87fea157a39ff12,
         type: 3}
@@ -1090,8 +1090,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 868201506}
   - {fileID: 660801804}
+  - {fileID: 868201506}
   - {fileID: 432450329}
   - {fileID: 2057733238}
   - {fileID: 1614303958}
@@ -1268,7 +1268,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1639736861}
-  - component: {fileID: 1639736863}
   - component: {fileID: 1639736862}
   - component: {fileID: 1639736864}
   m_Layer: 0
@@ -1318,24 +1317,6 @@ MonoBehaviour:
   enemyContrainer: {fileID: 468216815}
   enemyPrefab: {fileID: 656710119758037794, guid: 0b2708c00bda67145b8d631da9fc5c71,
     type: 3}
---- !u!114 &1639736863
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1639736859}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7eb17962499746d4a8b2e8a4cfb70c4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fogTilemap: {fileID: 868201504}
-  fogTile: {fileID: 11400000, guid: 96d9fbd237762ab4e8fb8d9f686afa00, type: 2}
-  player: {fileID: 1296997310}
-  revealRadius: 5
-  mapWidth: 50
-  mapHeight: 50
 --- !u!114 &1639736864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1351,9 +1332,9 @@ MonoBehaviour:
   fogTilemapBlack: {fileID: 868201504}
   fogTilemapTransparent: {fileID: 660801802}
   fogTileBlack: {fileID: 11400000, guid: 96d9fbd237762ab4e8fb8d9f686afa00, type: 2}
-  fogTileTransparent: {fileID: 0}
+  fogTileTransparent: {fileID: 11400000, guid: 684dc01fa5f62b9428f8b42b82dabcbf, type: 2}
   player: {fileID: 1296997310}
-  revealRadius: 3
+  revealRadius: 4
   fadeRadius: 5
 --- !u!1 &1652341193
 GameObject:
@@ -1522,6 +1503,74 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1001 &1705442621309671422
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 30227936924547665, guid: f829a22f0a0f70d4589c1f5a529ee32e,
+        type: 3}
+      propertyPath: m_Name
+      value: Square
+      objectReference: {fileID: 0}
+    - target: {fileID: 4781912168992553690, guid: f829a22f0a0f70d4589c1f5a529ee32e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4781912168992553690, guid: f829a22f0a0f70d4589c1f5a529ee32e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4781912168992553690, guid: f829a22f0a0f70d4589c1f5a529ee32e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4781912168992553690, guid: f829a22f0a0f70d4589c1f5a529ee32e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4781912168992553690, guid: f829a22f0a0f70d4589c1f5a529ee32e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4781912168992553690, guid: f829a22f0a0f70d4589c1f5a529ee32e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4781912168992553690, guid: f829a22f0a0f70d4589c1f5a529ee32e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4781912168992553690, guid: f829a22f0a0f70d4589c1f5a529ee32e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4781912168992553690, guid: f829a22f0a0f70d4589c1f5a529ee32e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4781912168992553690, guid: f829a22f0a0f70d4589c1f5a529ee32e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f829a22f0a0f70d4589c1f5a529ee32e, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1535,3 +1584,4 @@ SceneRoots:
   - {fileID: 844195839}
   - {fileID: 49676856}
   - {fileID: 1652341195}
+  - {fileID: 1705442621309671422}
