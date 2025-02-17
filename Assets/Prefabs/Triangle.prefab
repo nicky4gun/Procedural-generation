@@ -79,8 +79,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 50
-  m_Sprite: {fileID: 7482667652216324306, guid: 927bfdf21998d17428a23c010fe2e86d, type: 3}
+  m_SortingOrder: 30
+  m_Sprite: {fileID: 7482667652216324306, guid: 927bfdf21998d17428a23c010fe2e86d,
+    type: 3}
   m_Color: {r: 0.12645555, g: 0.0904165, b: 0.93962264, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -221,5 +222,6 @@ MonoBehaviour:
   stopDistance: 1.5
   detectionRange: 3
   shootingRange: 2
-  projectilePrefab: {fileID: 1064303666294053353, guid: bedaf5afc2f26694cac48c8b52fbdac6, type: 3}
+  projectilePrefab: {fileID: 1064303666294053353, guid: bedaf5afc2f26694cac48c8b52fbdac6,
+    type: 3}
   shootingCooldown: 2
