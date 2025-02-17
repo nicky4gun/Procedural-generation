@@ -1146,6 +1146,7 @@ GameObject:
   - component: {fileID: 1639736861}
   - component: {fileID: 1639736863}
   - component: {fileID: 1639736862}
+  - component: {fileID: 1639736864}
   m_Layer: 0
   m_Name: MapGenerator
   m_TagString: Untagged
@@ -1200,7 +1201,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1639736859}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7eb17962499746d4a8b2e8a4cfb70c4e, type: 3}
   m_Name: 
@@ -1211,6 +1212,18 @@ MonoBehaviour:
   revealRadius: 5
   mapWidth: 50
   mapHeight: 50
+--- !u!114 &1639736864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639736859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39a2953cc9296f64a9c7320bbc8a8353, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2057733237
 GameObject:
   m_ObjectHideFlags: 0
