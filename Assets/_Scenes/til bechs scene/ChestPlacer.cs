@@ -1,48 +1,68 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class ChestPlacer : MonoBehaviour
+public class ChestSpawner : MonoBehaviour
 {
-    public Grid grid;                  // Reference til dit Grid
-    public GameObject chestPrefab;     // Reference til kiste-prefaben
-    public int chestLimit = 10;        // Maksimalt antal kister der kan placeres
+    [Header("Chest Settings")]
+    public GameObject chestPrefab;   // Assign your chest prefab in the Inspector.
+    public int chestCount = 5;       // Number of chests to spawn.
 
-    // Dictionary til at holde styr på placerede kister pr. grid-celle
-    private Dictionary<Vector3Int, GameObject> placedChests = new Dictionary<Vector3Int, GameObject>();
+    [Header("Grid Settings")]
+    public Vector2Int gridSize = new Vector2Int(50, 50); // Dimensions of the grid.
+    public float tileSize = 1f;      // Size of each grid tile (assumes square tiles).
 
-    void Update()
+    // Optionally, you could define a 2D array to mark walkable tiles.
+    // For this example, we assume every tile is walkable.
+    // If you have specific conditions (like obstacles), update the logic below.
+
+    void Start()
     {
-        // Tjek om venstre museknap er trykket
-        if (Input.GetMouseButtonDown(0))
+        // Create a list to hold positions that are walkable.
+        List<Vector2Int> walkablePositions = new List<Vector2Int>();
+
+        // Populate the grid.
+        for (int x = 0; x < gridSize.x; x++)
         {
-            // Hvis vi har nået grænsen for antal kister, afbryd placeringen
-            if (placedChests.Count >= chestLimit)
+            for (int y = 0; y < gridSize.y; y++)
             {
-                Debug.Log("Maksimalt antal kister placeret!");
-                return;
+                // Example condition: If the tile is walkable.
+                // For this example, every tile is walkable.
+                bool isWalkable = true; // Replace with your condition if needed.
+                if (isWalkable)
+                {
+                    walkablePositions.Add(new Vector2Int(x, y));
+                }
             }
+        }
 
-            // Konverter musens position fra skærm til world position
-            Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        // Check if there are enough positions.
+        if (walkablePositions.Count < chestCount)
+        {
+            Debug.LogWarning("Not enough walkable positions for the number of chests. Adjusting chest count.");
+            chestCount = walkablePositions.Count;
+        }
 
-            // Få grid cellen ud fra world position
-            Vector3Int cellPosition = grid.WorldToCell(mouseWorldPos);
+        // Randomize the order of the walkable positions.
+        ShuffleList(walkablePositions);
 
-            // Tjek om der allerede er en kiste i cellen
-            if (placedChests.ContainsKey(cellPosition))
-            {
-                Debug.Log("Der er allerede en kiste placeret i cellen: " + cellPosition);
-                return;
-            }
+        // Spawn chests at the first 'chestCount' positions.
+        for (int i = 0; i < chestCount; i++)
+        {
+            Vector2Int gridPos = walkablePositions[i];
+            Vector3 worldPos = new Vector3(gridPos.x * tileSize, gridPos.y * tileSize, 0);
+            Instantiate(chestPrefab, worldPos, Quaternion.identity, transform);
+        }
+    }
 
-            // Få den centrale world position for cellen
-            Vector3 spawnPosition = grid.GetCellCenterWorld(cellPosition);
-
-            // Instantiér kiste-prefaben på den beregnede position
-            GameObject newChest = Instantiate(chestPrefab, spawnPosition, Quaternion.identity);
-
-            // Registrér den nye kiste, så cellen markeres som optaget
-            placedChests.Add(cellPosition, newChest);
+    // Fisher-Yates shuffle to randomize the list.
+    void ShuffleList(List<Vector2Int> list)
+    {
+        for (int i = 0; i < list.Count; i++)
+        {
+            int randomIndex = Random.Range(i, list.Count);
+            Vector2Int temp = list[i];
+            list[i] = list[randomIndex];
+            list[randomIndex] = temp;
         }
     }
 }
