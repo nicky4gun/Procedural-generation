@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3302454836953787892}
   - component: {fileID: 1720956862643847608}
   - component: {fileID: 2777644591571495330}
-  m_Layer: 7
+  m_Layer: 23
   m_Name: Triangle
   m_TagString: spawnable
   m_Icon: {fileID: 0}
@@ -80,9 +80,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 30
-  m_Sprite: {fileID: 7482667652216324306, guid: 927bfdf21998d17428a23c010fe2e86d,
+  m_Sprite: {fileID: 7945056504642708236, guid: d16856c833f938a41bc76561ad346e42,
     type: 3}
-  m_Color: {r: 0.12645555, g: 0.0904165, b: 0.93962264, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -156,8 +156,8 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.28866667}
-    oldSize: {x: 1, y: 1}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.16}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
