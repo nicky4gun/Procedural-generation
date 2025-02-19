@@ -347,19 +347,13 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 930753073}
   m_SourcePrefab: {fileID: 100100000, guid: 17b0c1ef334d17e4bbb74c4778001705, type: 3}
---- !u!1 &930753067 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2055102311959635369, guid: 17b0c1ef334d17e4bbb74c4778001705,
-    type: 3}
-  m_PrefabInstance: {fileID: 815609223}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &930753072
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 930753067}
+  m_GameObject: {fileID: 2055102312236257326}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e21ee0b0d3d0e0643bd2c98a406918dd, type: 3}
@@ -375,14 +369,14 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 930753067}
+  m_GameObject: {fileID: 2055102312236257326}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 010d5ba208891804c949b5d4496155fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   grid: {fileID: 0}
-  chestPrefab: {fileID: 930753067}
+  chestPrefab: {fileID: 2055102312236257326}
   chestLimit: 2
 --- !u!1 &973045764
 GameObject:
@@ -446,19 +440,13 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1080321635 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2055102311959635369, guid: 99597c7b4aa47494fb2b6061505735da,
-    type: 3}
-  m_PrefabInstance: {fileID: 1179601754}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1080321640
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1080321635}
+  m_GameObject: {fileID: 2055102313130847987}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e21ee0b0d3d0e0643bd2c98a406918dd, type: 3}
@@ -475,7 +463,7 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1080321635}
+  m_GameObject: {fileID: 2055102313130847987}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 530c3fc8e5b4f364fa22fa2093e85a36, type: 2}
@@ -496,14 +484,14 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1080321635}
+  m_GameObject: {fileID: 2055102313130847987}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 010d5ba208891804c949b5d4496155fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   grid: {fileID: 0}
-  chestPrefab: {fileID: 1080321635}
+  chestPrefab: {fileID: 2055102313130847987}
   chestLimit: 2
 --- !u!1001 &1179601754
 PrefabInstance:
@@ -615,6 +603,18 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1080321642}
   m_SourcePrefab: {fileID: 100100000, guid: 99597c7b4aa47494fb2b6061505735da, type: 3}
+--- !u!1 &2055102312236257326 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2055102311959635369, guid: 17b0c1ef334d17e4bbb74c4778001705,
+    type: 3}
+  m_PrefabInstance: {fileID: 815609223}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2055102313130847987 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2055102311959635369, guid: 99597c7b4aa47494fb2b6061505735da,
+    type: 3}
+  m_PrefabInstance: {fileID: 1179601754}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
