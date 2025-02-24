@@ -29,6 +29,8 @@ public class room_maker : MonoBehaviour
 
     void Start()
     {
+        enemies += EndFight.clearedStages * 3;
+
         GenerateMap();
         DrawMap();
 

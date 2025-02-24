@@ -12,6 +12,7 @@ public class Health : MonoBehaviour
     [SerializeField]
     private int _hp;
     public int HPBuff;
+    public bool isEnemy;
 
     void Start()
     {
@@ -39,6 +40,11 @@ public class Health : MonoBehaviour
             }
             if (_hp <= 0)
             {
+                if (isEnemy)
+                {
+                    GameObject.FindFirstObjectByType<EndFight>().EnemyDied();
+                }
+
                 Died?.Invoke();
             }
         }
