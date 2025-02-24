@@ -6,7 +6,7 @@ public class Guns_you_want_it: MonoBehaviour
     public Transform shootPoint; // The point where bullets are fired
     public GameObject bulletPrefab; // Bullet prefab
     public int bulletsPerShot = 1; // Number of bullets per shot
-    public float bulletSpeed = 10f; // Speed of each bullet
+    public float bulletSpeed = 20f; // Speed of each bullet
     public float fireRate = 0.2f; // Delay between shots
     public float spreadAngle = 10f; // Maximum spread angle in degrees
 
