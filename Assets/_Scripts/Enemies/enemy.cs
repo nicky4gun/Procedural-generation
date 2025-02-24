@@ -5,7 +5,7 @@ public class EnemyFollow : MonoBehaviour
     public Transform player; // Reference to the player
     public float speed = 2f; // Movement speed
     public float stopDistance = 1.5f; // Distance to stop before hitting the player
-    public float detectionRange = 10f; // Range where the enemy starts seeking the player
+    public float detectionRange = 15f; // Range where the enemy starts seeking the player
     public float shootingRange = 5f; // Range within which the enemy shoots
     public GameObject projectilePrefab; // Prefab for the projectile
     public float shootingCooldown = 2f; // Time between shots
