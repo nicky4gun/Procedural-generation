@@ -8,7 +8,7 @@ public class EndFight : MonoBehaviour
 
     public void Start()
     {
-        enemies = GameObject.FindWithTag("MapGenerator").enemies;
+        enemies = GameObject.FindWithTag("MapGenerator").GetComponent<room_maker>().enemies;
     }
 
     public void EnemyDied()
@@ -25,6 +25,6 @@ public class EndFight : MonoBehaviour
     {
         clearedStages++;
 
-        SceneManager.LoadSceneAsync(1);
+        SceneManager.LoadSceneAsync(0);
     }
 }

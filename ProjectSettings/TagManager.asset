@@ -6,6 +6,8 @@ TagManager:
   tags:
   - spawnable
   - PlayerAttack
+  - BuffManager
+  - MapGenerator
   layers:
   - Default
   - TransparentFX
