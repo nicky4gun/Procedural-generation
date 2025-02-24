@@ -21,6 +21,8 @@ public class Guns_you_want_it: MonoBehaviour
     {
         // Initialize audio source
         audioSource = GetComponent<AudioSource>();
+
+        fireRate -= AttackSpeedBuff.AttackSpeedBuffAmount;
     }
 
     void Update()
@@ -30,6 +32,11 @@ public class Guns_you_want_it: MonoBehaviour
         {
             Shoot();
             nextFireTime = Time.time + fireRate;
+        }
+
+        if(fireRate < 0.1f)
+        {
+            fireRate = 0.1f;
         }
     }
 

@@ -719,7 +719,7 @@ PrefabInstance:
     - target: {fileID: 337665825594760129, guid: 696b456e12faf724a87fea157a39ff12,
         type: 3}
       propertyPath: fireRate
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 337665825594760129, guid: 696b456e12faf724a87fea157a39ff12,
         type: 3}
@@ -729,12 +729,12 @@ PrefabInstance:
     - target: {fileID: 337665825594760129, guid: 696b456e12faf724a87fea157a39ff12,
         type: 3}
       propertyPath: bulletSpeed
-      value: 2
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 337665825594760129, guid: 696b456e12faf724a87fea157a39ff12,
         type: 3}
       propertyPath: spreadAngle
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 337665825594760129, guid: 696b456e12faf724a87fea157a39ff12,
         type: 3}
