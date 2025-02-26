@@ -1,10 +1,10 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class TestGameplayToBuff : MonoBehaviour
+public class DeathToMain : MonoBehaviour
 {
     public void ChangeScene()
     {
-        SceneManager.LoadSceneAsync(3);
+        SceneManager.LoadSceneAsync(0);
     }
 }

@@ -862,6 +862,41 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7257606518543471052, guid: 696b456e12faf724a87fea157a39ff12,
+        type: 3}
+      propertyPath: Died.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7257606518543471052, guid: 696b456e12faf724a87fea157a39ff12,
+        type: 3}
+      propertyPath: Died.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7257606518543471052, guid: 696b456e12faf724a87fea157a39ff12,
+        type: 3}
+      propertyPath: Died.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1639736866}
+    - target: {fileID: 7257606518543471052, guid: 696b456e12faf724a87fea157a39ff12,
+        type: 3}
+      propertyPath: Died.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7257606518543471052, guid: 696b456e12faf724a87fea157a39ff12,
+        type: 3}
+      propertyPath: Died.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ChangeScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 7257606518543471052, guid: 696b456e12faf724a87fea157a39ff12,
+        type: 3}
+      propertyPath: Died.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: TestGameplayToBuff, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7257606518543471052, guid: 696b456e12faf724a87fea157a39ff12,
+        type: 3}
+      propertyPath: Died.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8405904158203641011, guid: 696b456e12faf724a87fea157a39ff12,
         type: 3}
       propertyPath: m_Sprite
@@ -1375,6 +1410,7 @@ GameObject:
   - component: {fileID: 1639736862}
   - component: {fileID: 1639736864}
   - component: {fileID: 1639736865}
+  - component: {fileID: 1639736866}
   m_Layer: 0
   m_Name: MapGenerator
   m_TagString: Untagged
@@ -1454,6 +1490,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemies: 0
+--- !u!114 &1639736866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639736859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c92de5ba59cf01745990d26cfff132bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1652341193
 GameObject:
   m_ObjectHideFlags: 0
