@@ -752,6 +752,11 @@ PrefabInstance:
       propertyPath: muzzleFlashPrefab
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1799818457060137248, guid: 696b456e12faf724a87fea157a39ff12,
+        type: 3}
+      propertyPath: m_Mass
+      value: 99999
+      objectReference: {fileID: 0}
     - target: {fileID: 2632036808142107500, guid: 696b456e12faf724a87fea157a39ff12,
         type: 3}
       propertyPath: m_Enabled
