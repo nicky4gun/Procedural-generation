@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3404000380650289092
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1928793058850964721}
+  - component: {fileID: 1942943111143532218}
+  - component: {fileID: 2298249232860684289}
+  m_Layer: 0
+  m_Name: MapGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1928793058850964721
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3404000380650289092}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -11.41, y: -7.48, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1942943111143532218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3404000380650289092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d03b8c8f62fa29a4d9ef3684256c59bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mapWidth: 50
+  mapHeight: 50
+  roomCount: 10
+  minRoomSize: 5
+  maxRoomSize: 10
+  floorTilemap: {fileID: 0}
+  wallTilemap: {fileID: 0}
+  floorTile: {fileID: 11400000, guid: e87dff5acf16e594f966f3ee13693da5, type: 2}
+  wallTile: {fileID: 11400000, guid: 4a51a65e873f528438fc08628b0cb63d, type: 2}
+  enemies: 12
+  enemyContrainer: {fileID: 0}
+  enemyPrefab: {fileID: 656710119758037794, guid: 0b2708c00bda67145b8d631da9fc5c71,
+    type: 3}
+--- !u!114 &2298249232860684289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3404000380650289092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39a2953cc9296f64a9c7320bbc8a8353, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fogTilemapBlack: {fileID: 0}
+  fogTilemapTransparent: {fileID: 0}
+  fogTileBlack: {fileID: 11400000, guid: 96d9fbd237762ab4e8fb8d9f686afa00, type: 2}
+  fogTileTransparent: {fileID: 11400000, guid: 684dc01fa5f62b9428f8b42b82dabcbf, type: 2}
+  player: {fileID: 0}
+  revealRadius: 4
+  fadeRadius: 5
