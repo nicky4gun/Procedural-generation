@@ -12,8 +12,8 @@ EditorBuildSettings:
     path: Assets/_Scenes/Test/Buff.unity
     guid: 53d3829e4459646448182a21be097bfb
   - enabled: 1
-    path: Assets/_Scenes/Personal/Nicklas.unity
-    guid: b41af0a3f18839f41becd672026fd1a6
+    path: Assets/_Scenes/Personal/idk Benjamin.unity
+    guid: 7a414ec11c0541d4a820428a7f70ccb6
   - enabled: 1
     path: Assets/_Scenes/game/death screen.unity
     guid: f43a408e0d1f7814abb819a79f8c3286
