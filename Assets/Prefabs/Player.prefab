@@ -76,7 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 50
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
+    type: 3}
   m_Color: {r: 0.4339623, g: 0.4339623, b: 0.4339623, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -203,7 +204,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 100
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 7340401524540141584, guid: 58793ae0c27d8c341b11941c556c5507,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -316,7 +318,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00e319814eabdc74abf7961d71b97ac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  standardAttackPrefab: {fileID: 24762109479789025, guid: 4f925d1a2b56f844d84870a6eb95e74c, type: 3}
+  standardAttackPrefab: {fileID: 24762109479789025, guid: 4f925d1a2b56f844d84870a6eb95e74c,
+    type: 3}
   firePoint: {fileID: 6242012402690688415}
   fireForce: 20
   cooldown: 0
@@ -336,6 +339,7 @@ MonoBehaviour:
   _maxHp: 100
   _hp: 0
   HPBuff: 0
+  isEnemy: 0
   Healed:
     m_PersistentCalls:
       m_Calls: []
@@ -370,7 +374,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootPoint: {fileID: 6242012402690688415}
-  bulletPrefab: {fileID: 24762109479789025, guid: 4f925d1a2b56f844d84870a6eb95e74c, type: 3}
+  bulletPrefab: {fileID: 24762109479789025, guid: 4f925d1a2b56f844d84870a6eb95e74c,
+    type: 3}
   bulletsPerShot: 1
   bulletSpeed: 10
   fireRate: 0.2
