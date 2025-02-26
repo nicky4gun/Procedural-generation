@@ -5,6 +5,6 @@ public class TestBuffToGameplay : MonoBehaviour
 {
     public void ChangeScene()
     {
-        SceneManager.LoadSceneAsync(1);
+        SceneManager.LoadSceneAsync(2);
     }
 }

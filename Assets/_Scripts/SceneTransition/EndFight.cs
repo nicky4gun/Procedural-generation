@@ -25,6 +25,6 @@ public class EndFight : MonoBehaviour
     {
         clearedStages++;
 
-        SceneManager.LoadSceneAsync(0);
+        SceneManager.LoadSceneAsync(1);
     }
 }
