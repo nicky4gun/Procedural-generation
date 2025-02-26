@@ -157,7 +157,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.5, y: 2}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -221,7 +221,7 @@ MonoBehaviour:
   player: {fileID: 0}
   speed: 2
   stopDistance: 1.5
-  detectionRange: 3
+  detectionRange: 5
   shootingRange: 2
   projectilePrefab: {fileID: 1064303666294053353, guid: bedaf5afc2f26694cac48c8b52fbdac6,
     type: 3}
